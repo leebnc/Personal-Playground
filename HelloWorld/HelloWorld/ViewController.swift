@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func sayHello(_ sender: Any) {
-        self.uiTitle.text = "배고파"
+        self.uiTitle.text = "Hello World"
     }
 
 }
