@@ -12,6 +12,7 @@
 		F9D406FA1F70A5FA0003476B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9D406F81F70A5FA0003476B /* Main.storyboard */; };
 		F9D406FC1F70A5FA0003476B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9D406FB1F70A5FA0003476B /* Assets.xcassets */; };
 		F9D406FF1F70A5FA0003476B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9D406FD1F70A5FA0003476B /* LaunchScreen.storyboard */; };
+		F9D407071F70AF8A0003476B /* LaunchScreen2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9D407061F70AF8A0003476B /* LaunchScreen2.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		F9D406FB1F70A5FA0003476B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F9D406FE1F70A5FA0003476B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F9D407001F70A5FA0003476B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9D407061F70AF8A0003476B /* LaunchScreen2.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen2.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				F9D406F81F70A5FA0003476B /* Main.storyboard */,
 				F9D406FB1F70A5FA0003476B /* Assets.xcassets */,
 				F9D406FD1F70A5FA0003476B /* LaunchScreen.storyboard */,
+				F9D407061F70AF8A0003476B /* LaunchScreen2.storyboard */,
 				F9D407001F70A5FA0003476B /* Info.plist */,
 			);
 			path = HelloWorld;
@@ -123,6 +126,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9D407071F70AF8A0003476B /* LaunchScreen2.storyboard in Resources */,
 				F9D406FF1F70A5FA0003476B /* LaunchScreen.storyboard in Resources */,
 				F9D406FC1F70A5FA0003476B /* Assets.xcassets in Resources */,
 				F9D406FA1F70A5FA0003476B /* Main.storyboard in Resources */,
