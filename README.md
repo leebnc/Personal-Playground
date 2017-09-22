@@ -1,3 +1,3 @@
 # Personal Playground
 
-practicing SWIFT3 programming via xcode.
+practicing iOS(SWIFT) programming via xcode.
