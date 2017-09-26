@@ -44,10 +44,10 @@
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
         </scene>
-        <!--View Controller-->
+        <!--Second View Controller-->
         <scene sceneID="CWx-6b-fpg">
             <objects>
-                <viewController storyboardIdentifier="SecondVC" id="ODc-mw-DOp" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SecondVC" id="ODc-mw-DOp" customClass="SecondViewController" customModule="Scene_Trans01" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kGs-Mp-xoh"/>
                         <viewControllerLayoutGuide type="bottom" id="8m7-5V-S4f"/>
@@ -63,6 +63,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8dL-SB-B6L">
+                                <rect key="frame" x="164" y="225" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="dismiss:" destination="ODc-mw-DOp" eventType="touchUpInside" id="ttE-F5-7kP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
