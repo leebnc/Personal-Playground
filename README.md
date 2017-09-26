@@ -1,4 +1,3 @@
-# PersonalPlayground
-: Where I come to play.
+# Personal Playground
 
-/HelloWorld - first swift application 170919
+practicing iOS(SWIFT) programming via xcode.
