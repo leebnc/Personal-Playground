@@ -33,7 +33,15 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Next"/>
                                 <connections>
-                                    <segue destination="p0g-HB-hlh" kind="custom" customClass="NewSeque" customModule="Scene_CustomSegue" customModuleProvider="target" id="XAV-aO-AqW"/>
+                                    <segue destination="p0g-HB-hlh" kind="custom" identifier="custom_segue" customClass="NewSeque" customModule="Scene_CustomSegue" customModuleProvider="target" id="XAV-aO-AqW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RuH-bl-237">
+                                <rect key="frame" x="144" y="369" width="91" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Action Segue"/>
+                                <connections>
+                                    <segue destination="p0g-HB-hlh" kind="presentation" identifier="action_segue" id="bUz-ze-d5y"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -68,7 +76,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ncq-yY-nR0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="878" y="124"/>
+            <point key="canvasLocation" x="817" y="35"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="XAV-aO-AqW"/>
+    </inferredMetricsTieBreakers>
 </document>

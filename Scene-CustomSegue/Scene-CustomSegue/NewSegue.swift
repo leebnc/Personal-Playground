@@ -16,9 +16,3 @@ class NewSeque: UIStoryboardSegue {
         
     }
 }
-
-class viewController: UIViewController {
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        NSLog("세그웨이가 곧 실행됩니다.")
-    }
-}
