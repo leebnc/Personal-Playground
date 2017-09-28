@@ -1,7 +1,9 @@
 # Personal Playground
 
-Practicing iOS(SWIFT) programming via X-code.
+Practicing iOS(SWIFT3) programming via X-code.
 
+< Basic > </br>
+  
 HelloWorld</br>
 IBTest</br>
 Scene-Trans01</br>
