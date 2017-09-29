@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F95425861F7CE9980005B426"
+               BlueprintIdentifier = "F9797C4E1F7E1A7100FDF4A8"
                BuildableName = "SubmitValue.app"
                BlueprintName = "SubmitValue"
                ReferencedContainer = "container:SubmitValue.xcodeproj">
@@ -32,7 +32,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F95425861F7CE9980005B426"
+            BlueprintIdentifier = "F9797C4E1F7E1A7100FDF4A8"
             BuildableName = "SubmitValue.app"
             BlueprintName = "SubmitValue"
             ReferencedContainer = "container:SubmitValue.xcodeproj">
@@ -55,7 +55,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F95425861F7CE9980005B426"
+            BlueprintIdentifier = "F9797C4E1F7E1A7100FDF4A8"
             BuildableName = "SubmitValue.app"
             BlueprintName = "SubmitValue"
             ReferencedContainer = "container:SubmitValue.xcodeproj">
@@ -74,7 +74,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F95425861F7CE9980005B426"
+            BlueprintIdentifier = "F9797C4E1F7E1A7100FDF4A8"
             BuildableName = "SubmitValue.app"
             BlueprintName = "SubmitValue"
             ReferencedContainer = "container:SubmitValue.xcodeproj">
