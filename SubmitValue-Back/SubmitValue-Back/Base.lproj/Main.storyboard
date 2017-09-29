@@ -75,9 +75,9 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
-                        <outlet property="resultEmail" destination="8bC-Xf-vdC" id="feN-Y6-rp1"/>
-                        <outlet property="resultInterval" destination="8bC-Xf-vdC" id="JJC-db-lzf"/>
-                        <outlet property="resultUpdate" destination="gys-DB-iP2" id="Isz-49-25c"/>
+                        <outlet property="resultEmail" destination="Pdz-Ck-GZ6" id="3Md-Zt-RXj"/>
+                        <outlet property="resultInterval" destination="ETB-bf-Ip1" id="RMX-K0-IEm"/>
+                        <outlet property="resultUpdate" destination="gys-DB-iP2" id="qxR-4b-ISr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -127,23 +127,53 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ba1-MA-DLA">
                                 <rect key="frame" x="297" y="196" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="onSwitch:" destination="2fX-ut-RZk" eventType="valueChanged" id="z9f-NB-4Ag"/>
+                                </connections>
                             </switch>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="sJe-tR-Nns">
                                 <rect key="frame" x="252" y="263" width="94" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="onStepper:" destination="2fX-ut-RZk" eventType="valueChanged" id="qEn-x4-f9r"/>
+                                </connections>
                             </stepper>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="48d-kp-rfQ">
                                 <rect key="frame" x="163" y="318" width="49" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="onSubmit:" destination="2fX-ut-RZk" eventType="touchUpInside" id="eCh-dT-2TU"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="갱신스" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dzC-fi-9lh">
+                                <rect key="frame" x="123" y="206" width="121" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="1" green="0.089263750714253187" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="분마다 갱신" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SFO-ch-kUn">
+                                <rect key="frame" x="123" y="267" width="121" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="1" green="0.089263750714253187" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="email" destination="5Ns-X2-6N5" id="4Le-8J-Hgk"/>
+                        <outlet property="interval" destination="sJe-tR-Nns" id="r1r-mZ-eQ1"/>
+                        <outlet property="intervalText" destination="SFO-ch-kUn" id="6oN-mw-U9p"/>
+                        <outlet property="isUpdate" destination="ba1-MA-DLA" id="56X-g4-guU"/>
+                        <outlet property="isUpdateText" destination="dzC-fi-9lh" id="Jjd-Zl-ngZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5gT-Ka-LaZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="654" y="124"/>
+            <point key="canvasLocation" x="653.60000000000002" y="123.68815592203899"/>
         </scene>
     </scenes>
 </document>
