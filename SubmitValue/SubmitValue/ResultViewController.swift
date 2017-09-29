@@ -32,7 +32,7 @@ class ResultViewController : UIViewController {
     }
     
     @IBAction func onBack(_ sender: Any) {
-        self.presentingViewController?.dismiss(animated: true)ç
+        self.presentingViewController?.dismiss(animated: true)
     }
     
 }
