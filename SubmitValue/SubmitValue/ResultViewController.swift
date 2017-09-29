@@ -10,4 +10,20 @@ import UIKit
 
 class ResultViewController : UIViewController {
     
+    @IBOutlet var resultEmail: UILabel!
+    
+    @IBOutlet var resultUpdate: UILabel!
+    
+    @IBOutlet var resultInterval: UILabel!
+    
+    // 1. Email값을 받을 변수
+    var paramEmail : String = ""
+    
+    // 2. Update값을 받을 변수
+    var paramUpdate : Bool = false
+    
+    // 3. Interval값을 받을 변수
+    var paramInterval : Double = 0
+    
+    
 }
