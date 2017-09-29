@@ -10,16 +10,27 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    @IBOutlet var isUpdateText: UILabel!
+    
+    @IBOutlet var intervalText: UILabel!
+    
+    @IBOutlet var email: UITextField!
+    
+    @IBOutlet var isUpdate: UISwitch!
+    
+    @IBOutlet var interval: UIStepper!
+    
+    @IBAction func onSwitch(_ sender: UISwitch) {
+        if (sender.isOn == true) {
+            self.isUpdateText.text = "갱신함"
+        } else {
+            self.isUpdateText.text = "갱신하지 않음"
+        }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @IBAction func onStepper(_ sender: UIStepper) {
+        let value = Int(sender.value)
+        self.intervalText.text = "\(value)분 마다"
     }
-
-
 }
 
