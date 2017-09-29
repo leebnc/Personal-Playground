@@ -34,12 +34,14 @@ class ViewController: UIViewController {
     }
     
     @IBAction func onSubmit(_ sender: Any) {
-        guard let rvc = self.storyboard?.instantiateViewController(withIdentifier: "RVC") else {
+        guard let rvc = self.storyboard?.instantiateViewController(withIdentifier: "RVC") as? ResultViewController else {
             return
         }
         rvc.paramEmail = self.email.text!
         rvc.paramUpdate = self.isUpdate.isOn
         rvc.paramInterval = self.interval.value
+        
+        self.present(rvc, animated: true)
         
     
     }
