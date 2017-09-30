@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FormViewController : UIViewController {
+class FormViewController2 : UIViewController {
     
     @IBOutlet var email: UITextField!
     
@@ -34,20 +34,22 @@ class FormViewController : UIViewController {
     
     @IBAction func onSubmit(_ sender: Any) {
         
-        
-//        let ad = UIApplication.shared.delegate as? AppDelegate
+//        let preVC = self.presentingViewController
 //        
-//        ad?.paramEmail = self.email.text
-//        ad?.paramUpdate = self.isUpdate.isOn
-//        ad?.paramInterval = self.interval.value
-//
-//        self.presentingViewController?.dismiss(animated: true)
+//        guard let vc = preVC as? ViewController else {
+//            return
+//        }
+//        
+//        vc.paramEmail = self.email.text
+//        vc.paramUpdate = self.isUpdate.isOn
+//        vc.paramInterval = self.interval.value
         
-        let ud = UserDefaults.standard
+        let ad = UIApplication.shared.delegate as? AppDelegate
         
-        ud.set(self.email.text, forkey: "email")
-        ud.set(self.isUpdate.isOn, forkey: "isUpdate")
-        ud.set(self.interval.value, forkey: "interval")
+        ad?.paramEmail = self.email.text
+        ad?.paramUpdate = self.isUpdate.isOn
+        ad?.paramInterval = self.interval.value
+        
         
         self.presentingViewController?.dismiss(animated: true)
     }
