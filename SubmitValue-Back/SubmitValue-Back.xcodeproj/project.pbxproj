@@ -13,7 +13,6 @@
 		F94045B01F7E32E8006A6AC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F94045AF1F7E32E8006A6AC3 /* Assets.xcassets */; };
 		F94045B31F7E32E8006A6AC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F94045B11F7E32E8006A6AC3 /* LaunchScreen.storyboard */; };
 		F94045BB1F7E35C0006A6AC3 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94045BA1F7E35C0006A6AC3 /* FormViewController.swift */; };
-		F94045BD1F7E412D006A6AC3 /* FormViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94045BC1F7E412D006A6AC3 /* FormViewController2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +24,6 @@
 		F94045B21F7E32E8006A6AC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F94045B41F7E32E8006A6AC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F94045BA1F7E35C0006A6AC3 /* FormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
-		F94045BC1F7E412D006A6AC3 /* FormViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormViewController2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +60,6 @@
 				F94045AA1F7E32E8006A6AC3 /* ViewController.swift */,
 				F94045AC1F7E32E8006A6AC3 /* Main.storyboard */,
 				F94045BA1F7E35C0006A6AC3 /* FormViewController.swift */,
-				F94045BC1F7E412D006A6AC3 /* FormViewController2.swift */,
 				F94045AF1F7E32E8006A6AC3 /* Assets.xcassets */,
 				F94045B11F7E32E8006A6AC3 /* LaunchScreen.storyboard */,
 				F94045B41F7E32E8006A6AC3 /* Info.plist */,
@@ -143,7 +140,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F94045BB1F7E35C0006A6AC3 /* FormViewController.swift in Sources */,
-				F94045BD1F7E412D006A6AC3 /* FormViewController2.swift in Sources */,
 				F94045AB1F7E32E8006A6AC3 /* ViewController.swift in Sources */,
 				F94045A91F7E32E8006A6AC3 /* AppDelegate.swift in Sources */,
 			);

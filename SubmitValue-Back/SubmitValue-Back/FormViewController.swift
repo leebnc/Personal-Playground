@@ -45,9 +45,9 @@ class FormViewController : UIViewController {
         
         let ud = UserDefaults.standard
         
-        ud.set(self.email.text, forkey: "email")
-        ud.set(self.isUpdate.isOn, forkey: "isUpdate")
-        ud.set(self.interval.value, forkey: "interval")
+        ud.set(self.email.text, forKey: "email")
+        ud.set(self.isUpdate.isOn, forKey: "isUpdate")
+        ud.set(self.interval.value, forKey: "interval")
         
         self.presentingViewController?.dismiss(animated: true)
     }
