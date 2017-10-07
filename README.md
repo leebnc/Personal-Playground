@@ -1,4 +1,4 @@
-<h1>Personal Playground</h1>
+<h1>Playground</h1>
 
 <h2>Studying iOS(SWIFT3) programming & application development using X-code.</h2>
 
@@ -15,4 +15,5 @@ Sequence
   <li>Scene-CustomSegue</li>
   <li>SumbitValue</li>
   <li>SumbitValue-back</li>
+  <li>Msg-AlertController</li>
 </ol>
