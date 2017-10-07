@@ -1,8 +1,8 @@
-# Personal Playground
+<h1>Personal Playground</h1>
 
-<h1>Studying iOS(SWIFT3) programming & application development using X-code.</h1>
+<h2>Studying iOS(SWIFT3) programming & application development using X-code.</h2>
 
-<h2>Sequence</h2>
+Sequence</br>
 <ol>
   <li>HelloWorld</li>
 <li>IBTest</li>
