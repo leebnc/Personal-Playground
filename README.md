@@ -1,15 +1,18 @@
-# Personal Playground
+<h1>Personal Playground</h1>
 
-Practicing iOS(SWIFT3) programming via X-code.</br>
-< Basic ></br>
-  
-HelloWorld</br>
-IBTest</br>
-Scene-Trans01</br>
-Scene-Trans02</br>
-Scene-ActionSegue</br>
-Scene-ManualSegue</br>
-Scene-UnwindSegue</br>
-Scene-MultiUnwind</br>
-Scene-CustomSegue</br>
-SumbitValue</br>
+<h2>Studying iOS(SWIFT3) programming & application development using X-code.</h2>
+
+Sequence
+<ol>
+  <li>HelloWorld</li>
+  <li>IBTest</li>
+  <li>Scene-Trans01</li>
+  <li>Scene-Trans02</li>
+  <li>Scene-ActionSegue</li>
+  <li>Scene-ManualSegue</li>
+  <li>Scene-UnwindSegue</li>
+  <li>Scene-MultiUnwind</li>
+  <li>Scene-CustomSegue</li>
+  <li>SumbitValue</li>
+  <li>SumbitValue-back</li>
+</ol>
