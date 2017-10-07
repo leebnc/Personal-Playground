@@ -1,4 +1,4 @@
-<h1>Personal Playground</h1>
+<h1>Playground</h1>
 
 <h2>Studying iOS(SWIFT3) programming & application development using X-code.</h2>
 
