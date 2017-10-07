@@ -2,7 +2,7 @@
 
 Studying iOS(SWIFT3) programming & application development using X-code.</br>
 
-<B>Sequence</B></br>
+<ul>Sequence</ul></br>
 HelloWorld</br>
 IBTest</br>
 Scene-Trans01</br>
