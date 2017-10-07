@@ -3,6 +3,7 @@
 Studying iOS(SWIFT3) programming & application development using X-code.</br>
 
 <ul>Sequence</ul></br>
+<ol>
 HelloWorld</br>
 IBTest</br>
 Scene-Trans01</br>
@@ -14,3 +15,4 @@ Scene-MultiUnwind</br>
 Scene-CustomSegue</br>
 SumbitValue</br>
 SumbitValue-back</br>
+<ol>
