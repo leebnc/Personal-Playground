@@ -15,4 +15,5 @@ Sequence
   <li>Scene-CustomSegue</li>
   <li>SumbitValue</li>
   <li>SumbitValue-back</li>
+  <li>Msg-AlertController</li>
 </ol>
