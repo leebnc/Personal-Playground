@@ -14,6 +14,7 @@
 		F98034F61F8B07C700722A4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F98034F41F8B07C700722A4F /* LaunchScreen.storyboard */; };
 		F98034FE1F8B08CE00722A4F /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98034FD1F8B08CE00722A4F /* ListViewController.swift */; };
 		F98035001F8B0A9000722A4F /* MovieVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98034FF1F8B0A9000722A4F /* MovieVO.swift */; };
+		F98035021F8B318200722A4F /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98035011F8B318200722A4F /* MovieCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		F98034F71F8B07C700722A4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F98034FD1F8B08CE00722A4F /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		F98034FF1F8B0A9000722A4F /* MovieVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieVO.swift; sourceTree = "<group>"; };
+		F98035011F8B318200722A4F /* MovieCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				F98034EF1F8B07C700722A4F /* Main.storyboard */,
 				F98034FD1F8B08CE00722A4F /* ListViewController.swift */,
 				F98034FF1F8B0A9000722A4F /* MovieVO.swift */,
+				F98035011F8B318200722A4F /* MovieCell.swift */,
 				F98034F21F8B07C700722A4F /* Assets.xcassets */,
 				F98034F41F8B07C700722A4F /* LaunchScreen.storyboard */,
 				F98034F71F8B07C700722A4F /* Info.plist */,
@@ -146,6 +149,7 @@
 				F98034EE1F8B07C700722A4F /* ViewController.swift in Sources */,
 				F98035001F8B0A9000722A4F /* MovieVO.swift in Sources */,
 				F98034EC1F8B07C700722A4F /* AppDelegate.swift in Sources */,
+				F98035021F8B318200722A4F /* MovieCell.swift in Sources */,
 				F98034FE1F8B08CE00722A4F /* ListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
