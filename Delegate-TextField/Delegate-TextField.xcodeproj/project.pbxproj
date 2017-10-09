@@ -96,6 +96,7 @@
 				TargetAttributes = {
 					F98034AB1F89F58D00722A4F = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = RN2TMDUME2;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -260,7 +261,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = RN2TMDUME2;
 				INFOPLIST_FILE = "Delegate-TextField/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Choongwon.Delegate-TextField";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -272,7 +275,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = RN2TMDUME2;
 				INFOPLIST_FILE = "Delegate-TextField/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Choongwon.Delegate-TextField";
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -15,17 +15,26 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         // 이미지 피커 컨트롤러 창 닫기
-        picker.dismiss(animated: false)
-        
-        // 알림창 호출
-        let alert = UIAlertController(title: "", message: "이미지 선택이 취소되었습니다.", preferredStyle: .alert)
-        
-        alert.addAction(UIAlertAction(title: "확인", style: .cancel))
-        self.present(alert, animated: false)
+        self.dismiss(animated: false) {
+            () in
+            // 알림창 호출
+            let alert = UIAlertController(title: "", message: "이미지 선택이 취소되었습니다.", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "확인", style: .cancel))
+            self.present(alert, animated: false)
+        }
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        <#code#>
+        
+        // 이미지 피커 컨트롤러 창 닫기
+        picker.dismiss(animated: false) {
+            () in
+            
+            // 이미지를 이미지 뷰에 표시
+            let img = info[UIImagePickerControllerEditedImage] as? UIImage
+            self.imgView.image = img
+        }
     }
 
     @IBAction func pick(_ sender: Any) {
