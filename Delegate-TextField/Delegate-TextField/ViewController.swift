@@ -53,7 +53,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     // 텍스트 필드의 내용이 변결될 때 호출
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        print("텍스트 필드의 내용이 \(string)으로 변경되었습니다")
+        print("텍스트 필드에 \(string)이/가 입력되었습니다")
         
         if Int(string) == nil {
             return true
