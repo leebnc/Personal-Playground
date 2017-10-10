@@ -10,6 +10,8 @@ import UIKit
 
 class ListViewController : UITableViewController {
     
+    @IBOutlet var moreBtn: UIButton!
+    
     var page = 1
     
     lazy var list : [MovieVO] = {
@@ -20,50 +22,20 @@ class ListViewController : UITableViewController {
     @IBAction func more(_ sender: Any) {
         self.page += 1
         
-        let url = "http://115.68.183.178:2029/hoppin/movies?version=1&page=\(self.page)&count=10&genreId=&order=releasedateasc"
-        let apiURI : URL! = URL(string: url)
+        self.callMovieAPI()
         
-        let apidata = try! Data(contentsOf: apiURI)
-        
-        
-        let log = NSString(data: apidata, encoding: String.Encoding.utf8.rawValue) ?? "데이터가 없습니다"
-        NSLog("API Result=\( log )")
-        
-        
-        // JSON 객체를 파싱하여 NSDictionary 객체로 받음
-        do {
-            let apiDictionary = try JSONSerialization.jsonObject(with: apidata, options: []) as! NSDictionary
-            
-            let hoppin = apiDictionary["hoppin"] as! NSDictionary
-            let movies = hoppin["movies"] as! NSDictionary
-            let movie = movies["movie"] as! NSArray
-            
-            for row in movie {
-                let r = row as! NSDictionary
-                
-                let mvo = MovieVO()
-                
-                mvo.title = r["title"] as? String
-                mvo.description = r["genreNames"] as? String
-                mvo.thumbnail = r["thumbnailImage"] as? String
-                mvo.detail = r["linkUrl"] as? String
-                mvo.rating = ((r["ratingAverage"] as! NSString).doubleValue)
-                
-                self.list.append(mvo)
-                
-                self.tableView.reloadData()
-            }
-        } catch {
-            
-        }
-
+        self.tableView.reloadData()
         
     }
     
     
     override func viewDidLoad() {
         
-        let url = "http://115.68.183.178:2029/hoppin/movies?version=1&page=1&count=10&genreId=&order=releasedateasc"
+        self.callMovieAPI()
+    }
+    func callMovieAPI() {
+    
+        let url = "http://115.68.183.178:2029/hoppin/movies?version=1&page=\(self.page)&count=10&genreId=&order=releasedateasc"
         let apiURI : URL! = URL(string: url)
         
         let apidata = try! Data(contentsOf: apiURI)
@@ -92,10 +64,20 @@ class ListViewController : UITableViewController {
                 mvo.detail = r["linkUrl"] as? String
                 mvo.rating = ((r["ratingAverage"] as! NSString).doubleValue)
                 
+                let url: URL! = URL(string: mvo.thumbnail!)
+                let imagedata = try! Data(contentsOf: url)
+                mvo.thumbnailImage = UIImage(data:imagedata)
+                
                 self.list.append(mvo)
+                
+                let totalCount = (hoppin["totalCount"] as? NSString)!.integerValue
+                
+                if (self.list.count >= totalCount) {
+                    self.moreBtn.isHidden = true
+                }
             }
         } catch {
-            
+            NSLog("Parse Error!!")
         }
     }
     
@@ -112,13 +94,8 @@ class ListViewController : UITableViewController {
         cell.desc?.text = row.description
         cell.opendate?.text = row.opendate
         cell.rating?.text = "\(row.rating!)"
-        
-        let url: URL! = URL(string: row.thumbnail!)
-        
-        let imagedata = try! Data(contentsOf: url)
-        
-        cell.thumbnail.image = UIImage(data: imagedata)
-        
+
+        cell.thumbnail.image = row.thumbnailImage
         return cell
     }
     

@@ -90,6 +90,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="영화정보" id="PRq-pb-of5"/>
+                    <connections>
+                        <outlet property="moreBtn" destination="pKN-Wi-SmI" id="Ejh-j3-e0T"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="olm-2p-Zjf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
