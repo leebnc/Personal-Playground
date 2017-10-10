@@ -16,5 +16,9 @@ Sequence
   <li>SumbitValue</li>
   <li>SumbitValue-back</li>
   <li>Msg-AlertController</li>
+  <li>Msg-Notification</li>
   <li>Delegate-TextField</li>
+  <li>Delegate-ImagePicker</li>
+  <li>MyMovieChart</li>
+  <li>Table-CellHeight</li>
 </ol>
