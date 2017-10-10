@@ -10,31 +10,94 @@ import UIKit
 
 class ListViewController : UITableViewController {
     
-    var dataset = [
-        ("다크 나이트", "영웅물에 철학에 음악까지 더해져 예술이 되다", "2008-09-04", 8.95, "darknight.jpg"),
-        ("호우시절", "때를 알고 내리는 좋은 비", "2009-10-08", 7.31, "rain.jpg"),
-        ("말할수 없는 비밀", "여기서 너까지 다섯 걸음", "2015-05-07", 9.19, "secret.jpg")
-    ]
-    // 데이터 가져오기 **
+    var page = 1
+    
     lazy var list : [MovieVO] = {
         var datalist = [MovieVO]()
-        for(title, desc, opendate, rating, thumbnail) in self.dataset {
-            let mvo = MovieVO()
-            mvo.title = title
-            mvo.description = desc
-            mvo.opendate = opendate
-            mvo.rating = rating
-            mvo.thumbnail = thumbnail
-            
-            datalist.append(mvo)
-        }
-        
         return datalist
     }()
     
-    override func viewDidLoad() {
+    @IBAction func more(_ sender: Any) {
+        self.page += 1
+        
+        let url = "http://115.68.183.178:2029/hoppin/movies?version=1&page=\(self.page)&count=10&genreId=&order=releasedateasc"
+        let apiURI : URL! = URL(string: url)
+        
+        let apidata = try! Data(contentsOf: apiURI)
+        
+        
+        let log = NSString(data: apidata, encoding: String.Encoding.utf8.rawValue) ?? "데이터가 없습니다"
+        NSLog("API Result=\( log )")
+        
+        
+        // JSON 객체를 파싱하여 NSDictionary 객체로 받음
+        do {
+            let apiDictionary = try JSONSerialization.jsonObject(with: apidata, options: []) as! NSDictionary
+            
+            let hoppin = apiDictionary["hoppin"] as! NSDictionary
+            let movies = hoppin["movies"] as! NSDictionary
+            let movie = movies["movie"] as! NSArray
+            
+            for row in movie {
+                let r = row as! NSDictionary
+                
+                let mvo = MovieVO()
+                
+                mvo.title = r["title"] as? String
+                mvo.description = r["genreNames"] as? String
+                mvo.thumbnail = r["thumbnailImage"] as? String
+                mvo.detail = r["linkUrl"] as? String
+                mvo.rating = ((r["ratingAverage"] as! NSString).doubleValue)
+                
+                self.list.append(mvo)
+                
+                self.tableView.reloadData()
+            }
+        } catch {
+            
+        }
 
-       }
+        
+    }
+    
+    
+    override func viewDidLoad() {
+        
+        let url = "http://115.68.183.178:2029/hoppin/movies?version=1&page=1&count=10&genreId=&order=releasedateasc"
+        let apiURI : URL! = URL(string: url)
+        
+        let apidata = try! Data(contentsOf: apiURI)
+        
+
+        let log = NSString(data: apidata, encoding: String.Encoding.utf8.rawValue) ?? "데이터가 없습니다"
+        NSLog("API Result=\( log )")
+        
+        
+        // JSON 객체를 파싱하여 NSDictionary 객체로 받음
+        do {
+            let apiDictionary = try JSONSerialization.jsonObject(with: apidata, options: []) as! NSDictionary
+            
+            let hoppin = apiDictionary["hoppin"] as! NSDictionary
+            let movies = hoppin["movies"] as! NSDictionary
+            let movie = movies["movie"] as! NSArray
+            
+            for row in movie {
+                let r = row as! NSDictionary
+                
+                let mvo = MovieVO()
+                
+                mvo.title = r["title"] as? String
+                mvo.description = r["genreNames"] as? String
+                mvo.thumbnail = r["thumbnailImage"] as? String
+                mvo.detail = r["linkUrl"] as? String
+                mvo.rating = ((r["ratingAverage"] as! NSString).doubleValue)
+                
+                self.list.append(mvo)
+            }
+        } catch {
+            
+        }
+    }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         return self.list.count
@@ -49,7 +112,12 @@ class ListViewController : UITableViewController {
         cell.desc?.text = row.description
         cell.opendate?.text = row.opendate
         cell.rating?.text = "\(row.rating!)"
-        cell.thumbnail.image = UIImage(named: row.thumbnail!)
+        
+        let url: URL! = URL(string: row.thumbnail!)
+        
+        let imagedata = try! Data(contentsOf: url)
+        
+        cell.thumbnail.image = UIImage(data: imagedata)
         
         return cell
     }

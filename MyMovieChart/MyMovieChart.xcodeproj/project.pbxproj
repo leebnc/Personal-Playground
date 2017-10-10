@@ -336,6 +336,7 @@
 				F98034FC1F8B07C700722A4F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
