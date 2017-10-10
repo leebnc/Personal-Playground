@@ -15,7 +15,7 @@ class ListViewController : UITableViewController {
         ("호우시절", "때를 알고 내리는 좋은 비", "2009-10-08", 7.31, "rain.jpg"),
         ("말할수 없는 비밀", "여기서 너까지 다섯 걸음", "2015-05-07", 9.19, "secret.jpg")
     ]
-    
+    // 데이터 가져오기
     lazy var list : [MovieVO] = {
         var datalist = [MovieVO]()
         for(title, desc, opendate, rating, thumbnail) in self.dataset {
