@@ -33,6 +33,7 @@ class ListViewController : UITableViewController {
         
         self.callMovieAPI()
     }
+    
     func callMovieAPI() {
     
         let url = "http://115.68.183.178:2029/hoppin/movies?version=1&page=\(self.page)&count=10&genreId=&order=releasedateasc"
@@ -81,12 +82,28 @@ class ListViewController : UITableViewController {
         }
     }
     
+    func getThumbnailImage(_ index : Int) -> UIImage {
+        
+        let mvo = self.list[index]
+        
+        if let savedImage = mvo.thumbnailImage {
+            return savedImage
+        } else {
+            let url: URL! = URL(string: mvo.thumbnail!)
+            let imageData = try! Data(contentsOf: url)
+            mvo.thumbnailImage = UIImage(data: imageData)
+            
+            return mvo.thumbnailImage!
+        }
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         return self.list.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let row = self.list[indexPath.row]
+        NSLog("호출된 행 번호 : \(indexPath.row), 제목: \(row.title!)")
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "ListCell")! as! MovieCell
         
@@ -95,7 +112,9 @@ class ListViewController : UITableViewController {
         cell.opendate?.text = row.opendate
         cell.rating?.text = "\(row.rating!)"
 
-        cell.thumbnail.image = row.thumbnailImage
+        DispatchQueue.main.async(execute: {
+            cell.thumbnail.image = self.getThumbnailImage(indexPath.row)
+        })
         return cell
     }
     
