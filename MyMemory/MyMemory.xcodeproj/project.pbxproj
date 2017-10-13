@@ -13,9 +13,15 @@
 		F9CC9C091F8E4DF900E54EA3 /* MyMemory.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F9CC9C071F8E4DF900E54EA3 /* MyMemory.xcdatamodeld */; };
 		F9CC9C0B1F8E4DFA00E54EA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9CC9C0A1F8E4DFA00E54EA3 /* Assets.xcassets */; };
 		F9CC9C0E1F8E4DFA00E54EA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9CC9C0C1F8E4DFA00E54EA3 /* LaunchScreen.storyboard */; };
+		F9CC9C161F8F30F000E54EA3 /* MemoListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CC9C151F8F30F000E54EA3 /* MemoListVC.swift */; };
+		F9CC9C181F8F313C00E54EA3 /* MemoFormVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CC9C171F8F313C00E54EA3 /* MemoFormVC.swift */; };
+		F9CC9C1A1F8F315200E54EA3 /* MemoReadVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CC9C191F8F315200E54EA3 /* MemoReadVC.swift */; };
+		F9CC9C1C1F8F31CD00E54EA3 /* MemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CC9C1B1F8F31CD00E54EA3 /* MemoCell.swift */; };
+		F9CC9C1E1F8F321E00E54EA3 /* MemoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CC9C1D1F8F321E00E54EA3 /* MemoData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F92E020D1F9066AC00B6EBCC /* fountainpen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fountainpen@2x.png"; sourceTree = "<group>"; };
 		F9CC9BFD1F8E4DF900E54EA3 /* MyMemory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMemory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9CC9C001F8E4DF900E54EA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9CC9C021F8E4DF900E54EA3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +30,11 @@
 		F9CC9C0A1F8E4DFA00E54EA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F9CC9C0D1F8E4DFA00E54EA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F9CC9C0F1F8E4DFA00E54EA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9CC9C151F8F30F000E54EA3 /* MemoListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListVC.swift; sourceTree = "<group>"; };
+		F9CC9C171F8F313C00E54EA3 /* MemoFormVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoFormVC.swift; sourceTree = "<group>"; };
+		F9CC9C191F8F315200E54EA3 /* MemoReadVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoReadVC.swift; sourceTree = "<group>"; };
+		F9CC9C1B1F8F31CD00E54EA3 /* MemoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoCell.swift; sourceTree = "<group>"; };
+		F9CC9C1D1F8F321E00E54EA3 /* MemoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +67,29 @@
 		F9CC9BFF1F8E4DF900E54EA3 /* MyMemory */ = {
 			isa = PBXGroup;
 			children = (
-				F9CC9C001F8E4DF900E54EA3 /* AppDelegate.swift */,
+				F9CC9C1F1F90608000E54EA3 /* Resources */,
 				F9CC9C021F8E4DF900E54EA3 /* ViewController.swift */,
 				F9CC9C041F8E4DF900E54EA3 /* Main.storyboard */,
 				F9CC9C0A1F8E4DFA00E54EA3 /* Assets.xcassets */,
+				F9CC9C001F8E4DF900E54EA3 /* AppDelegate.swift */,
 				F9CC9C0C1F8E4DFA00E54EA3 /* LaunchScreen.storyboard */,
 				F9CC9C0F1F8E4DFA00E54EA3 /* Info.plist */,
 				F9CC9C071F8E4DF900E54EA3 /* MyMemory.xcdatamodeld */,
+				F9CC9C151F8F30F000E54EA3 /* MemoListVC.swift */,
+				F9CC9C171F8F313C00E54EA3 /* MemoFormVC.swift */,
+				F9CC9C191F8F315200E54EA3 /* MemoReadVC.swift */,
+				F9CC9C1D1F8F321E00E54EA3 /* MemoData.swift */,
+				F9CC9C1B1F8F31CD00E54EA3 /* MemoCell.swift */,
 			);
 			path = MyMemory;
+			sourceTree = "<group>";
+		};
+		F9CC9C1F1F90608000E54EA3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F92E020D1F9066AC00B6EBCC /* fountainpen@2x.png */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +164,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9CC9C1C1F8F31CD00E54EA3 /* MemoCell.swift in Sources */,
+				F9CC9C1E1F8F321E00E54EA3 /* MemoData.swift in Sources */,
 				F9CC9C091F8E4DF900E54EA3 /* MyMemory.xcdatamodeld in Sources */,
+				F9CC9C181F8F313C00E54EA3 /* MemoFormVC.swift in Sources */,
+				F9CC9C1A1F8F315200E54EA3 /* MemoReadVC.swift in Sources */,
 				F9CC9C031F8E4DF900E54EA3 /* ViewController.swift in Sources */,
+				F9CC9C161F8F30F000E54EA3 /* MemoListVC.swift in Sources */,
 				F9CC9C011F8E4DF900E54EA3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,12 +309,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RN2TMDUME2;
 				INFOPLIST_FILE = MyMemory/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Choongwon.MyMemory;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -293,12 +324,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RN2TMDUME2;
 				INFOPLIST_FILE = MyMemory/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Choongwon.MyMemory;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
